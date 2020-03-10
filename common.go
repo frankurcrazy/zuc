@@ -7,7 +7,7 @@ package zuc
 func addM(a uint32, b uint32) uint32 {
 	c := a + b
 
-	return (c & 0x7ffffff) + (c >> 31)
+	return (c & 0x7fffffff) + (c >> 31)
 }
 
 func mulByPow2(x uint32, k uint8) uint32 {
