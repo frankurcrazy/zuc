@@ -4,6 +4,13 @@
 
 package zuc
 
+type KeyDirection uint32
+
+const (
+	KEY_UPLINK   = KeyDirection(0)
+	KEY_DOWNLINK = KeyDirection(1)
+)
+
 func addM(a uint32, b uint32) uint32 {
 	c := a + b
 
