@@ -116,7 +116,7 @@ func (z *ZUC) bitReorganization() {
 func (z *ZUC) f_() uint32 {
 	w := (z.brc.X0 ^ z.f.R1) + z.f.R2
 	w1 := (z.f.R1 + z.brc.X1)
-	w2 := (z.f.R2 + z.brc.X2)
+	w2 := (z.f.R2 ^ z.brc.X2)
 
 	u := l1((w1 << 16) | (w2 >> 16))
 	v := l2((w2 << 16) | (w1 >> 16))
